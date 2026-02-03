@@ -25,6 +25,25 @@ pip install -r requirements.txt
 
 ---
 
-Thank you for exploring my **Machine Learning Portfolio**! I hope it provides insights into how I approach machine learning challenges. If you have questions or feedback, feel free to reach out at dillondalton0952362@gmail.com.
+Thank you for exploring my **Machine Learning Portfolio**! I hope it provides insights into how I approach machine learning challenges. If you have questions or feedback, feel free to reach out at <dillondalton0952362@gmail.com>.
 
 Happy exploring! 🚀
+
+```mermaid
+flowchart TD
+  P[Planner\n- short plan\n- propose multiple retrieval queries] --> L[Librarian\n- run each query on FAISS\n- consolidate best chunks]
+
+  L -. retrieval .-> IDX[(FAISS index)]
+  IDX -. chunks .-> L
+
+  L --> EP[[Evidence package]]
+  EP --> W[Writer\n- draft using only evidence package\n- add citations: [row=...]\n- note limitations if evidence is weak]
+
+  W --> DRAFT[[Draft]]
+  DRAFT --> R[Reviewer\n- check draft vs evidence\n- flag unsupported claims\n- flag missing citations/trade-offs\n- output required edits]
+
+  R --> EDITS[[Required edits]]
+  EDITS --> F[Finalizer\n- apply edits\n- preserve citations\n- grounded final response]
+
+  F --> OUT[Final response]
+```
