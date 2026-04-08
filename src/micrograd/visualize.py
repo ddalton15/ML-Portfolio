@@ -1,7 +1,6 @@
 # visualize.py
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 from matplotlib.colors import ListedColormap
 from graphviz import Digraph
 from engine import Value
@@ -217,7 +216,7 @@ def main():
     np.random.seed(1337)
     model = MLP(2, [16, 16, 1])
     n_params = len(model.parameters())
-    print(f"  Model: MLP(2, [16, 16, 1])")
+    print("  Model: MLP(2, [16, 16, 1])")
     print(f"  Parameters: {n_params}")
     print("=" * 50)
 
